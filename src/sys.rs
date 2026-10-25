@@ -235,7 +235,7 @@ fn logs_loop(shared: Shared, container: String) {
             continue;
         };
         let mut cmd = prefix.clone();
-        cmd.extend(words(&["logs", "-f", "--tail", "300", &container]));
+        cmd.extend(words(&["logs", "-f", "--tail", "300", container.as_str()]));
         let started = Instant::now();
         let child = Command::new(&cmd[0])
             .args(&cmd[1..])

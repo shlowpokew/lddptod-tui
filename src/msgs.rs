@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 //! ROS 2 message layouts, field for field, so serde can decode the CDR bytes.
 //! Only the messages the rover stack publishes are here.
 
