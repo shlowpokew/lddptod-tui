@@ -17,7 +17,7 @@ curl -fsSLO https://github.com/shlowpokew/lddptod-tui/releases/download/latest/r
 bash rover-tui.sh
 ```
 
-The script downloads the prebuilt binary (about 5 MB) into
+The script downloads the prebuilt binary (about 4 MB) into
 `~/.local/share/rover-tui/`. On later runs it only fetches a checksum, and
 downloads the binary again only if it changed. `bash rover-tui.sh --offline`
 skips the network. Every other argument goes to the binary:
