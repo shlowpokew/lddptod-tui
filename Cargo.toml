@@ -1,0 +1,23 @@
+[package]
+name = "rover-tui"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.88"
+description = "Terminal debugger for the breadcrumbs rover: LiDAR, odometry, TF, map, logs, Docker"
+publish = false
+
+[dependencies]
+# Pure-Rust ROS 2 client (RustDDS): talks to the Cyclone DDS stack in the
+# container over host networking, no ROS install needed on the Pi.
+ros2-client = "=0.11.1"
+ratatui = "0.30.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = "0.4"
+serialport = { version = "4.10", default-features = false }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true
